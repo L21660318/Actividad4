@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Elegante</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <form id="calculatorForm">
+        <h1>Calcula la Suma</h1>
+
+        <label for="num1">Primer Número:</label>
+        <input type="number" id="num1" name="num1" required>
+
+        <label for="num2">Segundo Número:</label>
+        <input type="number" id="num2" name="num2" required>
+
+        <button type="button" onclick="sumar()">Sumar</button>
+
+        <h3>Resultado: <span id="result"></span></h3>
+    </form>
+
+    <script>
+        function sumar() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+
+            const resultado = num1 + num2;
+
+            document.getElementById('result').textContent = resultado;
+        }
+    </script>
+</body>
+</html>
